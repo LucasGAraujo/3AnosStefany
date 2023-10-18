@@ -1,0 +1,173 @@
+/* Estilos gerais para dispositivos de tela grande (PCs) */
+/* Estilos para o quiz */
+.quiz-container {
+    text-align: center; /* Centraliza o texto no container */
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#quiz-form {
+    text-align: center; /* Centraliza o texto no container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    margin: 10px;
+    text-align: center; /* Centraliza o título */
+}
+
+form label, input {
+    display: block;
+    margin: 10px;
+    text-align: center; /* Centraliza os rótulos e as entradas de texto */
+}
+
+button {
+    background: #a71175;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Estilo para a mensagem de resposta correta */
+#result p {
+    color: #00a800; /* Cor verde para resposta correta */
+    font-weight: bold;
+}
+
+/* Estilo para o link "Acesse o conteúdo especial" */
+#result a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #a71175;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#result a:hover {
+    background: #ff3399; /* Cor de destaque quando hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a71175;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    opacity: 0; /* Inicialmente, a opacidade é 0 */
+    height: 0; /* Inicialmente, a altura é 0 */
+    transition: opacity 1s, height 1s; /* Efeito de transição para opacidade e altura */
+}
+
+.gallery-item {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.description {
+    width: 40%;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        width: 90%; 
+    }
+    #quiz-form {
+        max-width: 90%; 
+    }
+    .quiz-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .description {
+        width: 100%; 
+    }
+
+    img {
+        max-height: 400px; 
+    }
+    
+
+    .gallery {
+        transition: opacity 0.5s, height 0.5s; 
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; 
+    }
+
+    img {
+        max-height: 250px; 
+    }
+
+    .description {
+        width: 100%; /* Faça com que a descrição ocupe 100% da largura em dispositivos móveis */
+        
+    }/* Ajuste a transição para dispositivos móveis */
+        .gallery {
+            transition: opacity 0.5s, height 0.5s; /* Reduza a duração da transição para dispositivos móveis */
+        }
+        .quiz-container {
+            max-width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+        }
+    }
+
